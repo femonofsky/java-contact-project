@@ -1,0 +1,17 @@
+
+syntax = "proto3";
+
+package model;
+option java_package = "com.mycontacts.app.contactbook.model";
+option java_outer_classname = "ContractBookProto";
+
+message Contact {
+    int32 id = 1;
+    string name = 2;
+}
+
+
+message ContactBook {
+    repeated Contact contact = 1;
+}
+

@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Application",
+            "request": "launch",
+            "mainClass": "com.mycontacts.app.contactbook.Application",
+            "projectName": "contact-book"
+        }
+    ]
+}
