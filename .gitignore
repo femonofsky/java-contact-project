@@ -26,9 +26,6 @@
 /build/
 
 
-.mvn/
 .settings/
 .vcode/
 bin/
-mvnw
-mvnw.cmd

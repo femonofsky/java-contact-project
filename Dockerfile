@@ -1,10 +1,11 @@
+FROM openjdk:8-jdk-alpine
 
+MAINTAINER Femonofsky
 
-FROM maven:3.6.0-jdk-10-slim
 COPY . /usr/src/java-code/
-RUN mvn packageWORKDIR
+WORKDIR /usr/src/java-code
 
-WORKDIR /usr/src/java-app
-RUN cp /usr/src/java-code/target/*.jar ./app.jar
-EXPOSE 8088
+COPY /usr/src/java-code/target/*.jar ./app.jar
+
+EXPOSE 8080
 CMD ["java", "-jar", "app.jar"]

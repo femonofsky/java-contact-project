@@ -1,10 +1,16 @@
 #!/bin/bash
-#
 
 
-# build projects
-echo "[START] backend build"
-mvn package -f ./pom.xml
+echo "[START]"
+
+# install dependencies projects
+echo "[Load] dependencies"
+./mvnw clean install
+
+# build project
+echo "[Build] generate .jar file"
+./mvnw clean package
 
 
-docker-compose  up
+# run docker
+docker-compose up
