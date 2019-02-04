@@ -3,9 +3,9 @@ FROM openjdk:8-jdk-alpine
 MAINTAINER Femonofsky
 
 COPY . /usr/src/java-code/
-WORKDIR /usr/src/java-code
+WORKDIR /usr/src/java-code/
 
-COPY /usr/src/java-code/target/*.jar ./app.jar
+COPY /target/*.jar ./app.jar
 
-EXPOSE 8080
+EXPOSE 8088
 CMD ["java", "-jar", "app.jar"]

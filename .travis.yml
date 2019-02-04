@@ -1,0 +1,8 @@
+language: java
+jdk:
+  - oraclejdk9
+
+script:
+  - ./mvnw clean install -B
+  - ./mvnw clean test -B
+  - ./mvnw clean package
