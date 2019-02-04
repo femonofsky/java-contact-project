@@ -25,7 +25,7 @@ public class ContactBookController {
      * Get All Contacts
      * @return contactbook
      */
-    @RequestMapping(value = "/", produces = "application/x-protobuf")
+    @GetMapping(value = "/", produces = "application/x-protobuf")
     public ContactBook getAllContact() {
         logger.info("ContactBook.findAll()");
         return ContactBook.newBuilder().addAllContact(repository.findAll()).build();
@@ -46,7 +46,7 @@ public class ContactBookController {
 		return new ResponseEntity<>("Successful", HttpStatus.OK);
     }
     
-    @RequestMapping(value = "/{id}", produces = "application/x-protobuf")
+    @GetMapping(value = "/{id}", produces = "application/x-protobuf")
     public Contact findByNumber(@PathVariable("id") Integer id) {
         logger.info(String.format("Account.findById(%s)", id));
         return repository.findById(id);
